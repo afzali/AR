@@ -12,6 +12,9 @@ app.use(express.static(path.join(__dirname, '/')))
 
 
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/video.html'));
+});
+app.get('/image', (req, res) => {
     res.sendFile(path.join(__dirname + '/image.html'));
 });
 server.listen(3001, () => { console.log('listening on 3001') });
